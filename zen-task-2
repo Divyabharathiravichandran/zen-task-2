@@ -1,0 +1,54 @@
+task-1 
+
+Write a blog about objects and its internal representation in Javascript
+
+Objects form the basis of JavaScript programming, a very powerful way in which data can be organized and manipulated. They can reproduce convoluted structures and behaviors that make JavaScript suitable for development both in the front-end and back-end. We shall discuss how JavaScript represents objects internally and other key features of objects.
+
+Objects in JavaScript are basically a set of key-value pairs where every key, also referred to as a property, Is mapped to a value. Those values could be primitive data types, strings, numbers, booleans, or they could be other objects or functions. In general, there are three ways through which objects in JavaScript can be created: using literials {}, Using constructor functions with new, or the Object.create() method.
+
+1. Properties and Methods
+Internally, a JavaScript object maintains its properties and methods in a hash table-like structure, which at most provides an efficient access and retrieval facility. To every object, there is an internal property [[Prototype]] that is a link to another object from which it directly inherits; this is sometimes called the prototype chain.
+
+2. Prototypes and Inheritance
+JavaScript has prototypal inheritance—that is, an object inherits properties and methods from other objects. That happens via the prototype chain. At the point when a property or a method is accessed on an object, if it might not already live inside the object itself, JavaScript looks up the chain until the property is found or null is reached. 
+Object Mutability
+Unlike primitive data types, like numbers and strings, for instance, that are immutable, JavaScript objects are mutable. This means their properties can be added to or changed even after the object is instantiated.
+
+3.Garbage Collection
+Garbage collection is a process that occurs automatically in JavaScript to free up memory from objects no longer being referenced in your application. When an object has no more references targeting its particular location inMemory, then it can be Garbage Collected.
+Performance Considerations While most of the JavaScript engines themselves are very well optimized, there are performance considerations to be had when working with objects, particularly great or deeply nested structures—property access. Direct access to properties is usually very fast, but deep property access or iteration over large objects can degrade performance.
+
+4.Memory Management: A large number of objects created or large objects retained in memory can be very pricey in terms of memory usage and can bring about performance if it is not dealt with properly.
+
+JavaScript's object-orientedness, helped by its prototype-based inheritance model, offers the programmer very strong tools for developing scalable and reusing code structures. Mastering the use of objects will allow a developer to unlock the full potential offered by JavaScript and to build robust applications across different platforms.
+
+A JavaScript object, in essence, though being basically a data structure, can be used dynamically to achieve flexible programming paradigms and hence make JavaScript one of the most preferred choices in modern web development.
+
+
+
+task-2
+
+write a blog on the diffrence between document and window objects?
+
+In JavaScript, even though document and window are the two objects in the browser environment, these two entities are quite different in terms of purpose, scope, and functionality. The Window object refers to the global browser window or frame in which the DOM and other browser objects are contained within. 
+
+1. Window Objects :
+
+Global Context: Variables and functions declared globally in a web browser are attached to the window object automatically. For example, a global is referred to by window.foo.
+
+Properties: The window object also has a number of properties that contain information about the browser environment a script is running in: window.innerWidth and window.innerHeight, window.document refers to the DOM document loaded in that window.
+
+Methods: It further provides methods such as window.alert(), window.confirm(), window.setTimeout() to run some code after a time delay, etc., for operating on the browser environment.
+
+Lifecycle Management: The window object manages the events occurring in the lifecycle of the browser window like window.onload, window.onunload. These are triggered when a page has finished loading or is about to be unloaded, respectively.
+
+2. document Object :
+It is basically a child of the Window object and represents the entire HTML document as a tree structure, also known as a DOM.
+
+Content Manipulation: This access provides and allows modification of the content and the structure of the loaded HTML document; for example, document.getElementById(), document.createElement(), document.querySelector(), etc.
+
+The document object empowers event handling on the document, where document.addEventListener() and document.removeEventListener() are methods to attach and detach event listeners to elements within a document.
+
+Structural Access: The document object allows developers to programmatically access and change the structure and contents of HTML elements using the document object and their attributes or text content.
+
+
